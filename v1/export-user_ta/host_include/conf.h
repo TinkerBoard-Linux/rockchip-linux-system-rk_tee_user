@@ -51,7 +51,7 @@
 /* CFG_REE_FS_BLOCK_CACHE is not set ('n') */
 #define CFG_RK_BOOT 1 /* 'y' */
 #define CFG_RK_CORE_RKWVM 1 /* 'y' */
-#define CFG_RK_CORE_SECURE_VIDEO 1 /* 'y' */
+/* CFG_RK_CORE_SECURE_VIDEO is not set ('n') */
 /* CFG_RK_CRYPTO_AES_DES is not set ('n') */
 #define CFG_RK_CRYPTO_BORINGSSL 1 /* 'y' */
 /* CFG_RK_CRYPTO_HASH is not set ('n') */
@@ -94,7 +94,7 @@
 #define CFG_TEE_PANIC_DEBUG 1 /* 'y' */
 #define CFG_TEE_TA_LOG_LEVEL 1 /* '1' */
 /* CFG_TEE_TA_MALLOC_DEBUG is not set ('n') */
-#define CFG_VCODEC_SERVICE 1 /* 'y' */
+/* CFG_VCODEC_SERVICE is not set ('n') */
 #define CFG_WITH_ARM_TRUSTED_FW 1 /* 'y' */
 #define CFG_WITH_LPAE 1 /* 'y' */
 #define CFG_WITH_SOFTWARE_PRNG 1 /* 'y' */
