@@ -1,5 +1,5 @@
 # auto-generated TEE configuration file
-# TEE version 3.13.0-796-gcb202f37a
+# TEE version 3.13.0-876-g6b9b39300
 set(CFG_AES_GCM_TABLE_BASED y)
 set(CFG_ARM32_ta_arm32 y)
 set(CFG_ARM64_core y)
@@ -16,7 +16,7 @@ set(CFG_CORE_CLUSTER_SHIFT 2)
 # CFG_CORE_DEBUG_CHECK_STACKS is not set 
 # CFG_CORE_DUMP_OOM is not set 
 set(CFG_CORE_DYN_SHM y)
-set(CFG_CORE_HEAP_SIZE 131072)
+set(CFG_CORE_HEAP_SIZE 131072 )
 set(CFG_CORE_HUK_SUBKEY_COMPAT y)
 # CFG_CORE_LARGE_PHYS_ADDR is not set 
 set(CFG_CORE_MAX_SYSCALL_RECURSION 4)
