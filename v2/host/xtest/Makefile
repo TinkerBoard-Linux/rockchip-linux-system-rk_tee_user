@@ -33,15 +33,6 @@ OBJCOPY		?= $(CROSS_COMPILE)objcopy
 OBJDUMP		?= $(CROSS_COMPILE)objdump
 READELF		?= $(CROSS_COMPILE)readelf
 
-# Macros to detect the targeted architecture (e.g., arm-linux-gnueabihf or
-# aarch64-linux-gnu) and the corresponding bit size (32 or 64).
-define cc-arch
-$(shell $(1) -v 2>&1 | grep Target | sed 's/Target: \([^-]*\).*/\1/')
-endef
-define cc-bits
-$(if $(filter arm, $(1)),32,$(if $(filter aarch64, $(1)),64,unknown-arch))
-endef
-
 # OpenSSL is used by:
 # - GP tests series 8500
 # - Mbed TLS test 8103
@@ -54,7 +45,7 @@ LDFLAGS += -lcrypto
 CFLAGS += -I$(OPTEE_OPENSSL_EXPORT)
 else #OPTEE_OPENSSL_EXPORT
 CFLAGS += -I../openssl/include
-ifeq ($(call cc-bits, $(call cc-arch, $(CC))),32)
+ifeq ($(COMPILE_NS_USER),32)
 ifeq "$(TOOLCHAIN_UCLIBC)" "y"
 LDFLAGS += ../openssl/uclibc_lib/arm/libcrypto.a -ldl
 else
